@@ -1,0 +1,22 @@
+.modal-container {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  border-radius: 25px;
+  box-shadow: 0px 0px 0.8vw rgb(0 0 0 / 0.2);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2vh;
+}
+
+@media screen and (max-width: 1000px) {
+  .modal-container {
+    width: 90%;
+  }
+}

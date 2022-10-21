@@ -1,0 +1,33 @@
+.right-bottom-content {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  padding-top: 20%;
+}
+
+.borrow-button {
+  margin-top: auto;
+  background-color: rgb(255, 191, 0);
+  padding: 2vh 2.5vw;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 15px;
+  color: white;
+  border: none;
+  box-shadow: 0px 0px 0.6vw rgb(0 0 0 / 0.2);
+}
+
+@media screen and (max-width: 1000px) {
+  .right-bottom-content {
+    width: 100%;
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .borrow-button {
+    margin-top: 2em;
+    width: 100%;
+  }
+}

@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #424242;
+  word-wrap: break-word;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+textarea:focus,
+input:focus,
+input {
+  outline: none;
+  border: none;
+}
+
+input::placeholder {
+  overflow: hidden;
+}
+
+a,
+button {
+  text-decoration: none;
+  font-size: 1.3vw;
+}
+
+.close .fa-close {
+  font-size: 2vw !important;
+}
+
+.fa {
+  font-size: 1.6vw;
+}
+
+h1 {
+  font-size: 3vw;
+}
+
+h2 {
+  font-size: 2.1vw;
+}
+
+h3 {
+  font-size: 2vw;
+}
+
+h4 {
+  font-size: 1.9vw;
+}
+
+h5,
+.logo-side p,
+.profile-name {
+  font-size: 1.6vw;
+}
+
+h6 {
+  font-size: 1.4vw;
+}
+
+.right-side-nav a {
+  font-size: 1.4vw;
+}
+
+p,
+input::placeholder,
+textarea::placeholder,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="checkbox"],
+label,
+span,
+textarea,
+.login-description a,
+.forgot-password a {
+  font-size: 1.2vw;
+}
+
+button,
+.hamburger,
+.hamburger-navbar {
+  cursor: pointer;
+}
+
+a:hover,
+button:hover,
+.fa:hover {
+  color: rgb(255, 136, 0);
+}
+
+@media screen and (max-width: 1000px) {
+  a,
+  button {
+    text-decoration: none;
+    font-size: 2vw;
+  }
+
+  .fa {
+    font-size: 3.5vw !important;
+  }
+
+  h1 {
+    font-size: 5vw;
+  }
+
+  h2 {
+    font-size: 4.5vw;
+  }
+
+  h3 {
+    font-size: 4.2vw;
+  }
+
+  h4 {
+    font-size: 4vw;
+  }
+
+  h5,
+  .logo-side p {
+    font-size: 3.8vw;
+  }
+
+  h6 {
+    font-size: 3vw;
+  }
+
+  p,
+  input::placeholder,
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="url"],
+  input[type="checkbox"],
+  label,
+  textarea::placeholder,
+  textarea,
+  span {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  a,
+  button {
+    text-decoration: none;
+    font-size: 3vw;
+  }
+
+  .fa {
+    font-size: 5vw !important;
+  }
+
+  h1 {
+    font-size: 8vw;
+  }
+
+  h2 {
+    font-size: 6vw;
+  }
+
+  h3 {
+    font-size: 5vw;
+  }
+
+  h4 {
+    font-size: 4vw;
+  }
+
+  h5,
+  .logo-side p {
+    font-size: 3.8vw;
+  }
+
+  h6 {
+    font-size: 3.5vw;
+  }
+
+  p,
+  input::placeholder,
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="url"],
+  input[type="checkbox"],
+  label,
+  textarea::placeholder,
+  textarea,
+  span {
+    font-size: 3vw;
+  }
+}

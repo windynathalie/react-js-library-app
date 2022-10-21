@@ -1,0 +1,21 @@
+.login-description {
+  margin-top: 2em;
+}
+
+.login-description p {
+  color: #d0cccc;
+  -webkit-text-stroke: 0.1px #d0cccc;
+  padding-bottom: 3em;
+}
+
+.login-description a,
+.login-description p {
+  font-size: 1.1vw;
+}
+
+@media screen and (max-width: 1000px) {
+  .login-description a,
+  .login-description p {
+    font-size: 1.9vw;
+  }
+}

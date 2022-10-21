@@ -1,0 +1,11 @@
+.h1:hover {
+  color: rgb(255, 136, 0);
+}
+
+.login-title {
+  margin-bottom: 1.5em;
+}
+
+.hidden {
+  display: none;
+}

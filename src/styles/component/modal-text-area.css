@@ -1,0 +1,41 @@
+.text-area {
+  display: flex;
+  width: 100%;
+  align-items: top;
+  margin: 2vh 0;
+}
+
+.text-area input,
+.text-area textarea {
+  width: 80%;
+  border-color: #d0cccc;
+  border-radius: 10px;
+  color: #d0cccc;
+  border-width: thin;
+  border-style: solid;
+  padding: 2vh;
+}
+
+.text-area label {
+  width: 20%;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .text-area {
+    display: flex;
+    width: 100%;
+    align-items: top;
+    flex-direction: column;
+  }
+
+  .text-area input,
+  .text-area textarea {
+    width: 100%;
+    padding: 2vh;
+  }
+
+  .text-area label {
+    width: 100%;
+  }
+}

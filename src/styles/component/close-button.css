@@ -1,0 +1,18 @@
+.close {
+  color: red;
+  float: right;
+  background-color: transparent;
+  border-style: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .close .fa {
+    font-size: 3.5vw !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .close .fa {
+    font-size: 6vw !important;
+  }
+}

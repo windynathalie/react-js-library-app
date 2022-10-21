@@ -1,0 +1,27 @@
+.button {
+  padding: 0.5em 2.5em;
+  border-radius: 5px;
+  margin-right: 1em;
+}
+
+.login {
+  background-color: black;
+  color: white;
+  border-width: thin;
+  border-color: black;
+}
+
+.signup {
+  border-color: #d0cccc;
+  background-color: white;
+  color: #d0cccc;
+  border-width: thin;
+  border-style: solid;
+}
+
+.login:hover,
+.signup:hover {
+  background-color: rgb(255, 136, 0);
+  border-color: white;
+  color: white;
+}

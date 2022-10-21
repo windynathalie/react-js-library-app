@@ -1,0 +1,16 @@
+.book-cover img {
+  position: absolute;
+  top: 65%;
+  bottom: 45%;
+  height: 220px;
+  width: 150px;
+  left: 85%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+  .book-cover img {
+    display: none;
+  }
+}

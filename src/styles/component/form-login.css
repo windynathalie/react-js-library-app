@@ -1,0 +1,19 @@
+.form-login {
+  width: 80%;
+  box-shadow: 0px 0px 0.8vw rgb(0 0 0 / 0.2);
+  transition: transform 0.8s;
+}
+
+.form-login:hover {
+  transform: scale(1.02);
+}
+
+.form-login:hover {
+  transform: scale(1.02);
+}
+
+/* button */
+
+.button-login {
+  margin-top: 2em;
+}

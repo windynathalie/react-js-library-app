@@ -1,0 +1,14 @@
+.wrap-login {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.centering-login {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 4rem;
+  overflow: auto;
+}

@@ -1,0 +1,26 @@
+.logo-library {
+  height: 20%;
+  justify-content: end;
+}
+
+.logo-library img {
+  float: right;
+  width: 10vw;
+  transition: transform 0.8s;
+}
+
+.logo-library img:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 1000px) {
+  .logo-library img {
+    width: 18vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logo-library img {
+    width: 25vw;
+  }
+}

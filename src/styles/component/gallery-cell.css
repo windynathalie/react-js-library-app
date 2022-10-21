@@ -1,0 +1,102 @@
+.gallery-cell {
+  width: 50vw;
+  height: 80%;
+  margin-right: 2vw;
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+  background: transparent;
+  counter-increment: gallery-cell;
+}
+
+.flickity-page-dots {
+  bottom: 0 !important;
+}
+
+.flickity-viewport {
+  height: 50vh !important;
+}
+
+.gallery-container {
+  transition: transform 0.8s !important;
+}
+
+.gallery-container:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flickity-prev-next-button {
+  height: 3.5vw !important;
+  width: 3.5vw !important;
+  top: 48% !important;
+}
+
+#images-1 {
+  /* background-image: url("../image/image-1.jpg"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+  height: 100%;
+}
+
+.text-background {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0vw;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 2em;
+  border-width: 2vw;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-color: transparent;
+}
+
+.text-background h3,
+.text-background p {
+  color: white;
+}
+
+.text-background h3 {
+  font-size: 1.8vw;
+  margin-bottom: 0.2em;
+}
+
+@media screen and (max-width: 1000px) {
+  .flickity-viewport {
+    height: 60vw !important;
+  }
+
+  .flickity-page-dots .dot {
+    height: 1.5vw !important;
+    width: 1.5vw !important;
+  }
+
+  .flickity-page-dots {
+    bottom: 3vw !important;
+  }
+
+  .text-background h3 {
+    font-size: 3vw;
+  }
+
+  .list-title {
+    margin-left: 0;
+    margin-bottom: 1.2em;
+    margin-top: 1em;
+  }
+
+  .flickity-prev-next-button {
+    height: 7vw !important;
+    width: 7vw !important;
+    top: 42% !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .text-background {
+    padding: 1em;
+  }
+}
