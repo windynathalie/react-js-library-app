@@ -81,5 +81,3 @@ const Register = () => {
 };
 
 export default Register;
-
-export const emailSignUp = email;
