@@ -121,6 +121,10 @@
   .card-list img {
     height: 50%;
   }
+
+  .list-title {
+    margin-left: 0 !important;
+  }
 }
 
 @media screen and (max-width: 600px) {
