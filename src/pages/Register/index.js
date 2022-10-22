@@ -17,39 +17,34 @@ const Register = () => {
   const usernameChange = (e) => {
     e.preventDefault();
     setUsername(e.target.value);
-    // console.log(e.target.value, "event");
-    // console.log(e.target, "event");
   };
 
   const fullnameChange = (e) => {
     e.preventDefault();
     setFullname(e.target.value);
-    // console.log(e.target.value, "event");
-    // console.log(e.target, "event");
   };
 
   const emailChange = (e) => {
     e.preventDefault();
     setEmail(e.target.value);
-    // console.log(e.target.value, "event");
-    // console.log(e.target, "event");
   };
 
   const passwordChange = (e) => {
     e.preventDefault();
     setPassword(e.target.value);
-    // console.log(e.target.value, "event");
-    // console.log(e.target, "event");
   };
 
   const checkUser = (e) => {
     e.preventDefault();
-    if (username && fullName && email && password) {
-      alert("Account successfully created!");
-      // react router dom, ada sama location
-      window.location.replace("/home"); //akan mereload halaman.
-    } else if (!username || !fullName || !email || !password) {
+    if (!username || !fullName || !email || !password) {
       alert("Please complete your data");
+    } else if (!(email.includes("@") && email.includes("."))) {
+      alert("Please enter you email address in format yourname@example.domain");
+    } else if (password.length < 8) {
+      alert("Please input password be at least 8 character long");
+    } else if (username && fullName && email && password) {
+      alert("Account successfully created!");
+      window.location.replace("/home");
     }
   };
 
@@ -86,3 +81,5 @@ const Register = () => {
 };
 
 export default Register;
+
+export const emailSignUp = email;
