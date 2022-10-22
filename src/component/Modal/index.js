@@ -7,6 +7,7 @@ import ModalTextArea from "../ModalTextArea";
 
 const Modal = (props) => {
   const {
+    modalSaveClicked,
     modalClicked,
     modalState,
     modalH5,
@@ -39,7 +40,7 @@ const Modal = (props) => {
             modalLabel={modalTextArea}
             modalPlaceholder={modalPlaceholderTextArea}
           />
-          <ModalButton modalClicked={modalClicked} />
+          <ModalButton modalClicked={modalSaveClicked} />
         </form>
       </div>
     </div>

@@ -38,7 +38,13 @@ const Register = () => {
     e.preventDefault();
     if (!username || !fullName || !email || !password) {
       alert("Please complete your data");
-    } else if (!(email.includes("@") && email.includes("."))) {
+    } else if (
+      !String(email)
+        .toLowerCase()
+        .match(
+          /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+        )
+    ) {
       alert("Please enter you email address in format yourname@example.domain");
     } else if (password.length < 8) {
       alert("Please input password be at least 8 character long");

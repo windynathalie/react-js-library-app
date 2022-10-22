@@ -1,0 +1,38 @@
+@media screen and (max-width: 1000px) {
+  .card-navbar-type {
+    width: 40%;
+    height: 100%;
+    background-color: #f1f1f1;
+    border-radius: 5vh;
+    border-style: none;
+  }
+
+  .card-navbar-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-navbar-wrap p {
+    margin: 0;
+    margin-left: 0.8em;
+    font-weight: 500;
+    font-size: 3vw;
+  }
+
+  .card-navbar .fa {
+    font-size: 3.5vw !important;
+  }
+
+  .card-navbar-type:hover {
+    background-color: orange;
+  }
+
+  .card-navbar-type:hover * {
+    color: white;
+  }
+}
+
+@media screen and (max-width: 600px) {
+}

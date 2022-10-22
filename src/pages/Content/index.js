@@ -32,6 +32,16 @@ const Content = () => {
     }
   };
 
+  const saveBookClicked = (e) => {
+    e.preventDefault();
+    if (addBookState === "modal hidden-modal") {
+      setAddBookState("modal");
+    } else if (addBookState === "modal") {
+      setAddBookState("modal hidden-modal");
+      alert("Data changes saved successfully!");
+    }
+  };
+
   // Delete Book
   const [deleteBookState, setDeleteBookState] = useState(
     "delete-modal hidden-modal"
@@ -67,6 +77,7 @@ const Content = () => {
 
       <Modal
         modalClicked={addBookClicked}
+        modalSaveClicked={saveBookClicked}
         modalState={addBookState}
         modalH5="Add Data"
         modalItem1="Url Image"

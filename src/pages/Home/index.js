@@ -10,6 +10,7 @@ import "../../styles/primary/primary.css";
 import "../../styles/pages/home.css";
 
 import { contentCard } from "../../data";
+import NavbarDropdown from "../../component/NavbarDropdown";
 
 // Sidebar Navbar
 const Home = () => {
@@ -37,6 +38,16 @@ const Home = () => {
       setAddBookState("modal");
     } else if (addBookState === "modal") {
       setAddBookState("modal hidden-modal");
+    }
+  };
+
+  const saveBookClicked = (e) => {
+    e.preventDefault();
+    if (addBookState === "modal hidden-modal") {
+      setAddBookState("modal");
+    } else if (addBookState === "modal") {
+      setAddBookState("modal hidden-modal");
+      alert("Data changes saved successfully!");
     }
   };
 
@@ -70,11 +81,22 @@ const Home = () => {
               })}
             </div>
           </div>
+
+          <div className="card-navbar">
+            <div className="row-card-navbar">
+              <p>Search By:</p>
+              <div className="column-card-navbar">
+                <NavbarDropdown iconClassName="fa fa-list" name="Categories" />
+                <NavbarDropdown iconClassName="fa fa-clock-o" name="All Time" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <Modal
         modalClicked={addBookClicked}
+        modalSaveClicked={saveBookClicked}
         modalState={addBookState}
         modalH5="Add Data"
         modalItem1="Url Image"
