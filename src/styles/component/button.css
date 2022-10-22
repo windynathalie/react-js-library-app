@@ -19,6 +19,18 @@
   box-shadow: 0px 0px 0.6vw rgb(0 0 0 / 0.2);
 }
 
+.borrow-button:hover,
+.clicked {
+  background-color: #99d815;
+  color: white;
+  font-weight: bold;
+}
+
+.not-avail,
+.not-avail:hover {
+  background-color: red;
+}
+
 @media screen and (max-width: 1000px) {
   .right-bottom-content {
     width: 100%;

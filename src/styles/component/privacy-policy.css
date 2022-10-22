@@ -19,3 +19,10 @@
     font-size: 1.9vw;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .login-description a,
+  .login-description p {
+    font-size: 2.4vw;
+  }
+}

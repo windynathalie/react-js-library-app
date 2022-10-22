@@ -60,8 +60,9 @@ const Content = () => {
           releaseDate={firstMatch.bookReleased}
           bookStatus={firstMatch.bookStatus}
           bookParagraph={firstMatch.bookParagraph}
+          statusStyle={firstMatch.bookStatus}
         />
-        <Button />
+        <Button statusStyle={firstMatch.bookStatus} />
       </div>
 
       <Modal

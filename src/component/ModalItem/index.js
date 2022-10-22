@@ -6,14 +6,12 @@ const ModalItem = (props) => {
   return (
     <div className="form-item">
       <label>{modalLabel}</label>
-      <br />
       <input
         type={modalType}
         id="url"
         name="url"
         placeholder={`${modalPlaceholder}`}
       />
-      <br />
     </div>
   );
 };

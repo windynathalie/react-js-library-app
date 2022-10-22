@@ -40,10 +40,8 @@
   font-weight: bold;
 }
 
-.borrow-button:hover {
-  background-color: #99d815;
-  color: white;
-  font-weight: bold;
+.not-available {
+  color: red;
 }
 
 @media screen and (max-width: 1000px) {

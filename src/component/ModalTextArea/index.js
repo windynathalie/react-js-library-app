@@ -6,7 +6,6 @@ const ModalTextArea = (props) => {
   return (
     <div className="text-area">
       <label>{modalLabel}</label>
-      <br />
       <textarea
         onfocusout="onFocusOutForm('description')"
         name="description"
@@ -15,7 +14,6 @@ const ModalTextArea = (props) => {
         form="usrform"
         rows="5"
       ></textarea>
-      <br />
     </div>
   );
 };

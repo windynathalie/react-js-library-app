@@ -11,9 +11,3 @@
 .form-login:hover {
   transform: scale(1.02);
 }
-
-/* button */
-
-.button-login {
-  margin-top: 2em;
-}

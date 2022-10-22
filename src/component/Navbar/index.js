@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "../../styles/component/navbar.css";
 import NavbarLogo from "../../image/bookshelf-logo.png";
-import { Link } from "react-router-dom";
+import Dropdown from "../Dropdown";
+import SearchBox from "../SearchBox";
 
 const Navbar = (props) => {
   const { hamburgerNavbarClicked, hamburgerNavbarState } = props;
@@ -35,56 +36,27 @@ const Navbar = (props) => {
           <i className="fa fa-bars"></i>
         </button>
       </div>
+
       <div className="dropdown">
-        <div className="hover"></div>
-        <div className="categories">
-          <button onClick={(e) => dropdownClicked(e)} className="categories-p">
-            All Categories
-          </button>
-          <div className="dropdown">
-            <button className="dropbtn" onClick={(e) => dropdownClicked(e)}>
-              <i className="fa fa-caret-down all-time-dropdown dropbtn"></i>
-            </button>
-            <div id="myDropdown" className={dropdownState}>
-              <Link to={"/home"}>Link 1</Link>
-              <Link to={"/home"}>Link 2</Link>
-              <Link to={"/home"}>Link 3</Link>
-            </div>
-          </div>
-        </div>
-        <div className="all-time">
-          <button onClick={(e) => dropdownClicked2(e)}>All Time</button>
-          <div className="dropdown">
-            <button
-              className="dropbtn btns"
-              onClick={(e) => dropdownClicked2(e)}
-            >
-              <i className="fa fa-caret-down all-time-dropdown dropbtn"></i>
-            </button>
-            <div id="myDropdown2" className={dropdownState2}>
-              <Link to={"/home"}>Link 1</Link>
-              <Link to={"/home"}>Link 2</Link>
-              <Link to={"/home"}>Link 3</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="search-box">
-        <button className="button-search" id="button-search">
-          <i className="fa fa-search" aria-hidden="true"></i>
-        </button>
-        <input
-          onfocusout="onFocusOutForm('search')"
-          type="text"
-          placeholder="Search Book"
-          name="search"
-          id="search"
+        <Dropdown
+          dropdownCLicked={(e) => dropdownClicked(e)}
+          dropdownName="All Categories"
+          dropdownState={dropdownState}
+        />
+        <Dropdown
+          dropdownCLicked={(e) => dropdownClicked2(e)}
+          dropdownName="All Time"
+          dropdownState={dropdownState2}
         />
       </div>
+
+      <SearchBox />
+
       <div className="logo-side">
         <img src={NavbarLogo} alt="logo" />
         <p>Library</p>
       </div>
+
       <div className="logo-side-responsive">
         <img src={NavbarLogo} alt="logo" />
       </div>
