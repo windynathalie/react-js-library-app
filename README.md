@@ -6,7 +6,8 @@ _Library application with multi-feature like adding books data, editing book dat
 
 1. HTML
 2. CSS
-3. Javascript (DOM Manipulation)
+3. Javascript
+4. ReactJS (Framework)
 
 ### Final Deployment
 
