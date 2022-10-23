@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Library Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_Library application with multi-feature like adding books data, editing book data, and deleting book data_
 
-## Available Scripts
+### Tools
 
-In the project directory, you can run:
+1. HTML
+2. CSS
+3. Javascript (DOM Manipulation)
 
-### `npm start`
+### Final Deployment
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+See [Library App](https://gorgeous-sunshine-a863e6.netlify.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### How to run project
 
-### `npm test`
+1. Open your terminal and then type:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+$ git clone {the url to the GitHub repo}
+```
 
-### `npm run build`
+2. cd into the new folder and type:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+$ npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. To run the React project.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+$ npm start
+```
 
-### `npm run eject`
+### How the project works?
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Run the _login.html_. The result will be shown like:
+   Enter the email and password that was created in the login code.
+2. Click signup button, if you want to create button. The register page will be shown like:
+   Enter username, and fullname that you want. Enter email with the usual email format (yourname@example.domain) and password must be at least 8 characters.
+3. After clicking login button on _login.html_. or signup button on _signup.html_, the home of Library App will be shown like:
+4. We can add new book by clicking Add Data on Sidebar in Homepage.
+5. When we click book carousel or book card in Homepage, it can directly turn us into book description page.
+   On the description page, the available book will be shown with the green text color, and the not available book will be shown with the red text color. The book data is created with static objects. You can modify it in the data folder.
+6. On description page, we can edit book data by clicking the "Edit" on the right top corner. The modal will be pop out like:
+7. On description page, we can also delete book data by clicking the "Delete" on the right top corner. The modal will be pop out like:
+8. When we want to Sign Out, then click back button on description page. After that, the homepage will be shown. Click Sign Out button on sidebar.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The screenshoot of the step can be accessed via: [Project Works Screenshoot](https://drive.google.com/drive/folders/1kjph-i0Wv9LYUJYZgxeRRIJ3ltFyjucM?usp=sharing)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Several reference that I use to help this project go well. Thanks to...
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. [Flickity](https://flickity.metafizzy.co/)
 
-## Learn More
+   ```html
+   <link
+     rel="stylesheet"
+     href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+   />
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```html
+   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. [Font Awesome](https://fontawesome.com/)
 
-### Code Splitting
+   ```html
+   <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+   />
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. [Google Fonts](https://fonts.google.com/)
+   ```html
+   <link
+     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+     rel="stylesheet"
+   />
+   ```
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Created by: Windy Nathalie Ong (2022)

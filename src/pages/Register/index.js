@@ -60,7 +60,11 @@ const Register = () => {
         <LogoLibrary />
 
         <div className="centering-register">
-          <Title name={"Register"} />
+          <Title
+            name={"Register"}
+            textSpan1={"Register to"}
+            textSpan2={"create account"}
+          />
 
           <div className="register-box">
             <FormRegister

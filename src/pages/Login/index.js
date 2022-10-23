@@ -32,7 +32,7 @@ const Login = () => {
   const checkUser = (e) => {
     e.preventDefault();
     if (email === "windy.nathalie@gmail.com") {
-      if (password === "a") {
+      if (password === "12345678") {
         alert("Login Successful!");
         // react router dom, ada sama location
         window.location.replace("/home"); //akan mereload halaman.
@@ -52,7 +52,11 @@ const Login = () => {
         <LogoLibrary />
 
         <div className="centering-login">
-          <Title name={"Login"} />
+          <Title
+            name={"Login"}
+            textSpan1={"Login to"}
+            textSpan2={"your account"}
+          />
 
           <div className="login-box">
             <FormLogin
@@ -64,7 +68,7 @@ const Login = () => {
 
             <LoginRegisterButton
               buttonName1="Login"
-              buttonName2="Register"
+              buttonName2="Signup"
               functionButton={(e) => checkUser(e)}
               linkTo1={"/home"}
               linkTo2={"/register"}
