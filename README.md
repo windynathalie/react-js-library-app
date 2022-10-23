@@ -34,16 +34,14 @@ $ npm start
 
 ### How the project works?
 
-1. Run the _login.html_. The result will be shown like:
-   Enter the email and password that was created in the login code.
-2. Click signup button, if you want to create button. The register page will be shown like:
-   Enter username, and fullname that you want. Enter email with the usual email format (yourname@example.domain) and password must be at least 8 characters.
-3. After clicking login button on _login.html_. or signup button on _signup.html_, the home of Library App will be shown like:
+1. Run the _login.html_. Enter the email and password that was created in the login code.
+2. Click signup button, if you want to create button. Enter username, and fullname that you want. Enter email with the usual email format (yourname@example.domain) and password must be at least 8 characters.
+3. After clicking login button on _login.html_. or signup button on _signup.html_, the home of Library App will be shown.
 4. We can add new book by clicking Add Data on Sidebar in Homepage.
 5. When we click book carousel or book card in Homepage, it can directly turn us into book description page.
    On the description page, the available book will be shown with the green text color, and the not available book will be shown with the red text color. The book data is created with static objects. You can modify it in the data folder.
-6. On description page, we can edit book data by clicking the "Edit" on the right top corner. The modal will be pop out like:
-7. On description page, we can also delete book data by clicking the "Delete" on the right top corner. The modal will be pop out like:
+6. On description page, we can edit book data by clicking the "Edit" on the right top corner. The modal will be pop out.
+7. On description page, we can also delete book data by clicking the "Delete" on the right top corner. The modal will be pop out.
 8. When we want to Sign Out, then click back button on description page. After that, the homepage will be shown. Click Sign Out button on sidebar.
 
 The screenshoot of the step can be accessed via: [Project Works Screenshoot](https://drive.google.com/drive/folders/1kjph-i0Wv9LYUJYZgxeRRIJ3ltFyjucM?usp=sharing)
