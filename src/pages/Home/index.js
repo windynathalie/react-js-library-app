@@ -12,6 +12,8 @@ import "../../styles/pages/home.css";
 import { contentCard } from "../../data";
 import NavbarDropdown from "../../component/NavbarDropdown";
 
+import swal from "sweetalert";
+
 // Sidebar Navbar
 const Home = () => {
   const [sidebarState, setSidebarState] = useState("left-side-carousel");
@@ -35,7 +37,25 @@ const Home = () => {
   const addBookClicked = (e) => {
     e.preventDefault();
     if (addBookState === "modal hidden-modal") {
-      setAddBookState("modal");
+      swal("Are you sure you want to add book data?", {
+        buttons: {
+          cancel: "No",
+          catch: {
+            text: "Yes",
+            value: "catch",
+            className: "swal-yes",
+          },
+        },
+      }).then((value) => {
+        switch (value) {
+          case "catch":
+            setAddBookState("modal");
+            break;
+
+          default:
+            setAddBookState("modal hidden-modal");
+        }
+      });
     } else if (addBookState === "modal") {
       setAddBookState("modal hidden-modal");
     }

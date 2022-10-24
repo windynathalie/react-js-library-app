@@ -4,7 +4,7 @@ import CloseButton from "../CloseButton";
 import Image from "../../image/checked.png";
 
 const DeleteModal = (props) => {
-  const { bookName, modalClicked, modalState } = props;
+  const { bookName, modalClicked, modalState, status } = props;
   return (
     <div className={modalState}>
       <div className="delete-container">
@@ -12,7 +12,7 @@ const DeleteModal = (props) => {
         <div className="delete-content">
           <img src={Image} alt="checked" />
           <p>
-            Data <span>{bookName}</span> berhasil dihapus!
+            <span>{bookName}</span> Book successfully {status}!
           </p>
         </div>
       </div>

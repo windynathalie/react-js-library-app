@@ -13,6 +13,7 @@ import DeleteModal from "../../component/DeleteModal";
 
 import { useParams } from "react-router-dom";
 import { contentCard } from "../../data";
+import swal from "sweetalert";
 
 const Content = () => {
   const { bookId } = useParams();
@@ -26,7 +27,25 @@ const Content = () => {
   const addBookClicked = (e) => {
     e.preventDefault();
     if (addBookState === "modal hidden-modal") {
-      setAddBookState("modal");
+      swal("Are you sure you want to edit book data?", {
+        buttons: {
+          cancel: "No",
+          catch: {
+            text: "Yes",
+            value: "catch",
+            className: "swal-yes",
+          },
+        },
+      }).then((value) => {
+        switch (value) {
+          case "catch":
+            setAddBookState("modal");
+            break;
+
+          default:
+            setAddBookState("modal hidden-modal");
+        }
+      });
     } else if (addBookState === "modal") {
       setAddBookState("modal hidden-modal");
     }
@@ -46,10 +65,61 @@ const Content = () => {
   const [deleteBookState, setDeleteBookState] = useState(
     "delete-modal hidden-modal"
   );
+  const [statusState, setStatusState] = useState("deleted");
+
   const deleteBookClicked = (e) => {
     e.preventDefault();
     if (deleteBookState === "delete-modal hidden-modal") {
-      setDeleteBookState("delete-modal");
+      swal("Are you sure you want to delete this data?", {
+        buttons: {
+          cancel: "No",
+          catch: {
+            text: "Yes",
+            value: "catch",
+            className: "swal-yes",
+          },
+        },
+      }).then((value) => {
+        switch (value) {
+          case "catch":
+            setDeleteBookState("delete-modal");
+            break;
+
+          default:
+            setDeleteBookState("delete-modal hidden-modal");
+        }
+      });
+    } else if (deleteBookState === "delete-modal") {
+      setDeleteBookState("delete-modal hidden-modal");
+    }
+  };
+
+  //Borrow Clicked
+  const borrowClicked = (e) => {
+    e.preventDefault();
+    if (deleteBookState === "delete-modal hidden-modal") {
+      if (firstMatch.bookStatus === "Available") {
+        swal("Are you sure you want to borrow this book?", {
+          buttons: {
+            cancel: "No",
+            catch: {
+              text: "Yes",
+              value: "catch",
+              className: "swal-yes",
+            },
+          },
+        }).then((value) => {
+          switch (value) {
+            case "catch":
+              setDeleteBookState("delete-modal");
+              setStatusState("borrowed");
+              break;
+
+            default:
+              setDeleteBookState("delete-modal hidden-modal");
+          }
+        });
+      }
     } else if (deleteBookState === "delete-modal") {
       setDeleteBookState("delete-modal hidden-modal");
     }
@@ -72,7 +142,10 @@ const Content = () => {
           bookParagraph={firstMatch.bookParagraph}
           statusStyle={firstMatch.bookStatus}
         />
-        <Button statusStyle={firstMatch.bookStatus} />
+        <Button
+          statusStyle={firstMatch.bookStatus}
+          buttonClicked={borrowClicked}
+        />
       </div>
 
       <Modal
@@ -94,6 +167,7 @@ const Content = () => {
         bookName={firstMatch.bookTitle}
         modalClicked={deleteBookClicked}
         modalState={deleteBookState}
+        status={statusState}
       />
     </div>
   );

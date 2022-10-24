@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../../styles/component/button.css";
 
 const Button = (props) => {
-  const { statusStyle } = props;
+  const { statusStyle, buttonClicked } = props;
 
   //Not Available Style
   const [buttonStatusState, setButtonStatusState] = useState("borrow-button");
@@ -23,7 +23,9 @@ const Button = (props) => {
 
   return (
     <div className="right-bottom-content">
-      <button className={buttonStatusState}>{textState}</button>
+      <button className={buttonStatusState} onClick={buttonClicked}>
+        {textState}
+      </button>
     </div>
   );
 };

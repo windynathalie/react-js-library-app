@@ -23,6 +23,10 @@
   padding: 2vw 5vw;
 }
 
+.swal-yes {
+  background-color: rgb(255, 191, 0);
+}
+
 @media screen and (max-width: 1000px) {
   .bottom-side-content {
     flex-direction: column;
