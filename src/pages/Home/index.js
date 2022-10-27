@@ -11,11 +11,14 @@ import "../../styles/pages/home.css";
 
 import { contentCard } from "../../data";
 import NavbarDropdown from "../../component/NavbarDropdown";
+import { useNavigate } from "react-router-dom";
 
 import swal from "sweetalert";
 
 // Sidebar Navbar
 const Home = () => {
+  const navigate = useNavigate();
+
   const [sidebarState, setSidebarState] = useState("left-side-carousel");
   const [hamburgerNavbarState, setHamburgerNavbarState] = useState(
     "hamburger-navbar hidden"
@@ -71,6 +74,32 @@ const Home = () => {
     }
   };
 
+  //Logout Clicked
+  const logoutClicked = (e) => {
+    e.preventDefault();
+    if (addBookState === "modal hidden-modal") {
+      swal("Are you sure you want to logout?", {
+        buttons: {
+          cancel: "No",
+          catch: {
+            text: "Yes",
+            value: "catch",
+            className: "swal-yes",
+          },
+        },
+      }).then((value) => {
+        switch (value) {
+          case "catch":
+            navigate("/");
+            break;
+
+          default:
+            navigate("/home");
+        }
+      });
+    }
+  };
+
   return (
     <div className="container-modal">
       <div className="container-carousel">
@@ -78,6 +107,7 @@ const Home = () => {
           hamburgerSidebarClicked={hamburgerClicked}
           sidebarState={sidebarState}
           modalClicked={addBookClicked}
+          logoutClicked={logoutClicked}
         />
         <div className="right-side-carousel">
           <Navbar

@@ -1,11 +1,11 @@
 // import React, { useState } from "react";
 import "../../styles/component/sidebar.css";
 import ProfileSidebar from "../../image/profile-navbar.png";
-import { Link } from "react-router-dom";
 import React from "react";
 
 const Sidebar = (props) => {
-  const { hamburgerSidebarClicked, sidebarState, modalClicked } = props;
+  const { hamburgerSidebarClicked, sidebarState, modalClicked, logoutClicked } =
+    props;
   return (
     <div className={sidebarState}>
       <div className="sidebar">
@@ -19,13 +19,11 @@ const Sidebar = (props) => {
         <div className="profil">
           <img src={ProfileSidebar} alt="" />
           <p className="profile-name">Niki Zefanya</p>
-          <Link to={"/"}>
-            <button className="signout">
-              <i className="fa fa-sign-out" aria-hidden="true">
-                <p>Logout</p>
-              </i>
-            </button>
-          </Link>
+          <button onClick={logoutClicked} className="signout">
+            <i className="fa fa-sign-out" aria-hidden="true">
+              <p>Logout</p>
+            </i>
+          </button>
         </div>
 
         <div className="menu-sidebar">
